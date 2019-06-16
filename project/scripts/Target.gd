@@ -41,7 +41,6 @@ func _on_Area2D_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 			Audio.play_note()
 
 func _on_AchievementTimer_timeout() -> void:
-	print("Target: ", global_position, ", ", position)
 	if achievementClicks > 0 and PlayServices.isConnected():
 		PlayServices.increase_achievement(Achievements.CLICKITY, achievementClicks)
 		achievementClicks = 0
