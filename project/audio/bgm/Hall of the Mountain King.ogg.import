@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hall of the Mountain King.ogg-35af8164633f48903a58da9c1e55505d.oggstr"
+
+[deps]
+
+source_file="res://audio/bgm/Hall of the Mountain King.ogg"
+dest_files=[ "res://.import/Hall of the Mountain King.ogg-35af8164633f48903a58da9c1e55505d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

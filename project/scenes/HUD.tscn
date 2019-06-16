@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
+[ext_resource path="res://fonts/epilog/epilog.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/FH-GoodDogPlain WTT/GOODDP__.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://sprites/ui/achievement.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/leaderboard.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/gpgs-logo.png" type="Texture" id=6]
+[ext_resource path="res://sprites/ui/refresh.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ui/settings.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 150
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="PauseMenu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0941176, 0.0941176, 0.0941176, 0.862745 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PauseMenu"]
+editor/display_folded = true
+visible = false
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 925.0
+margin_bottom = 689.0
+
+[node name="DebugLabel" type="Label" parent="PauseMenu/ScrollContainer"]
+margin_right = 118.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "Debug"
+
+[node name="Online" type="Control" parent="PauseMenu"]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -315.0
+margin_top = -150.0
+margin_right = 315.0
+margin_bottom = 150.0
+
+[node name="ButtonAchievements" type="Button" parent="PauseMenu/Online"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -150.0
+margin_right = -160.0
+margin_bottom = -10.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="ButtonLeaderboards" type="Button" parent="PauseMenu/Online"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 33.0
+margin_top = -150.0
+margin_right = 173.0
+margin_bottom = -10.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 5 )
+flat = true
+
+[node name="LoginButton" type="Button" parent="PauseMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.0
+margin_top = -260.0
+margin_right = 82.0
+margin_bottom = 46.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 6 )
+flat = true
+
+[node name="StatusButton" type="Button" parent="PauseMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = 285.0
+margin_right = 30.0
+margin_bottom = 419.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 7 )
+flat = true
+
+[node name="SettingsButtton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -140.0
+margin_bottom = 140.0
+icon = ExtResource( 8 )
+flat = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -150.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="PauseMenu/Online/ButtonAchievements" to="." method="_on_ButtonAchievements_pressed"]
+[connection signal="pressed" from="PauseMenu/Online/ButtonLeaderboards" to="." method="_on_ButtonLeaderboards_pressed"]
+[connection signal="pressed" from="PauseMenu/LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="pressed" from="PauseMenu/StatusButton" to="." method="_on_ButtonStatus_pressed"]
+[connection signal="pressed" from="SettingsButtton" to="." method="_on_SettingsBtn_pressed"]
