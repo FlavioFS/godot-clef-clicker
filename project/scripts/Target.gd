@@ -40,7 +40,12 @@ func _on_Area2D_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 			emit_signal("click", clicks)
 			Audio.play_note()
 
-func _on_AchievementTimer_timeout() -> void:
+func fetchAchievement() -> void:
 	if achievementClicks > 0 and PlayServices.isConnected():
 		PlayServices.increase_achievement(Achievements.CLICKITY, achievementClicks)
 		achievementClicks = 0
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST or \
+		what == MainLoop.NOTIFICATION_WM_FOCUS_OUT:
+		fetchAchievement()

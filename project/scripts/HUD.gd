@@ -18,7 +18,7 @@ func fetchPauseUI():
 	var isConnected = PlayServices.isConnected()
 	$PauseMenu/LoginButton.visible = not isConnected
 	$PauseMenu/Online.visible = isConnected
-	
+
 func _on_SettingsBtn_pressed() -> void:
 	paused = not paused
 	fetchPauseUI()

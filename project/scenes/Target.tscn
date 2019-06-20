@@ -4,7 +4,6 @@
 [ext_resource path="res://scenes/Trail.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/fx/clef1.png" type="Texture" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 140, 140 )
 
@@ -26,11 +25,6 @@ scale = Vector2( 2, 2 )
 z_index = 1
 texture = ExtResource( 3 )
 
-[node name="AchievementTimer" type="Timer" parent="."]
-wait_time = 10.0
-autostart = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
-[connection signal="timeout" from="AchievementTimer" to="." method="_on_AchievementTimer_timeout"]

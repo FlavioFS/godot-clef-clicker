@@ -50,3 +50,19 @@ Clicker game demo for Android (built from Godot Engine).
 ## Permissions
  - Access Network State
  - Internet
+
+## Caveats
+- You will need to have your app "Published" at [Google Play Console](https://play.google.com/apps/publish)  
+  - That doesn't mean having a public version, only means you must pass the initial "Pending publication" state.
+- **YOU CANNOT TEST AN UNPUBLISHED VERSION**
+  - Yeah! You cannot build from Godot and go straight up testing your GPGS code, it won't work!
+  - You **MUST** upload it to App store as an Internal test **AT LEAST**.
+- Any of these versions will be enough for a minimal test:
+  - Internal test
+  - Alpha test
+  - Beta test
+- You must create a **list of testers** at Console.
+- You must allow that list of testers (specially for Internal test) at Google Play Game Services tab (the GPGS one, not the App Console).
+- Internal tests are instant, as fast as Google Drive access.
+- Alpha and Beta can take ours to reflect changes in store.
+- Published version may take days.
