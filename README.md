@@ -3,7 +3,7 @@
 ## Description
 Clicker game demo for Android (built from Godot Engine).
 
-## [:video_game: App demo](https://play.google.com/apps/testing/com.melonsoda.godotgpgstest)
+## [:video_game: App demo](https://play.google.com/store/apps/details?id=com.melonsoda.godotgpgstest)
 [![Clef clicker gif](github/clefclicker.gif)](https://play.google.com/store/apps/details?id=com.melonsoda.godotgpgstest)
 
 ## Features

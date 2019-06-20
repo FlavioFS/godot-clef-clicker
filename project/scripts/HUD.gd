@@ -38,7 +38,7 @@ func _on_ButtonAchievements_pressed() -> void:
 
 func _on_ButtonLeaderboards_pressed() -> void:
 	if PlayServices.isConnected():
-		PlayServices.show_leaderboard(Leaderboards.LEAD_CLICKS)
+		PlayServices.show_leaderboards()
 	else:
 		fetchPauseUI()
 		_on_LoginButton_pressed()

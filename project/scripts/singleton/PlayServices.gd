@@ -15,7 +15,7 @@ func _receive_message(tag, from, key, data):
 		if key == "login" and data:
 			emit_signal("online", data)
 			unlock_achievement(Achievements.LOGIN)
-		
+
 		# I changed the module sources (GodotGoogleService)
 		# and recompiled Godot to add this custom callback
 		if key == "loginFail":
@@ -67,7 +67,7 @@ func show_leaderboards():
 func show_leaderboard(id: String):
 	if isConnected():
 		gplay.show_leaderboard(id)
-	
+
 func submit_leaderboard(score: int, id: String):
 	if isConnected():
 		gplay.show_leaderboard(score, id)

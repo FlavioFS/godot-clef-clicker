@@ -9,11 +9,11 @@
 [ext_resource path="res://sprites/ui/refresh.png" type="Texture" id=7]
 [ext_resource path="res://sprites/ui/settings.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 50
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 80
 font_data = ExtResource( 3 )
 
@@ -41,7 +41,6 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PauseMenu"]
-editor/display_folded = true
 visible = false
 margin_left = 20.0
 margin_top = 20.0
@@ -51,11 +50,10 @@ margin_bottom = 689.0
 [node name="DebugLabel" type="Label" parent="PauseMenu/ScrollContainer"]
 margin_right = 118.0
 margin_bottom = 50.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Debug"
 
 [node name="Online" type="Control" parent="PauseMenu"]
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -76,7 +74,7 @@ margin_top = -150.0
 margin_right = -160.0
 margin_bottom = -10.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 icon = ExtResource( 4 )
 flat = true
 
@@ -90,7 +88,7 @@ margin_top = -150.0
 margin_right = 173.0
 margin_bottom = -10.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 icon = ExtResource( 5 )
 flat = true
 
@@ -104,7 +102,7 @@ margin_top = -260.0
 margin_right = 82.0
 margin_bottom = 46.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 icon = ExtResource( 6 )
 flat = true
 
@@ -119,7 +117,7 @@ margin_top = 285.0
 margin_right = 30.0
 margin_bottom = 419.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 icon = ExtResource( 7 )
 flat = true
 
