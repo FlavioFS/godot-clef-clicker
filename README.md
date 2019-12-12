@@ -4,7 +4,7 @@
 Clicker game demo for Android (built from Godot Engine).
 
 ## [:video_game: App demo](https://play.google.com/store/apps/details?id=com.melonsoda.godotgpgstest)
-[![Clef clicker gif](github/clefclicker.gif)](https://play.google.com/store/apps/details?id=com.melonsoda.godotgpgstest)
+[![Clef clicker gif](https://i.postimg.cc/hP2M3W4b/clefclicker.gif)](https://play.google.com/store/apps/details?id=com.melonsoda.godotgpgstest)
 
 ## Features
  - Google Play Games Services integration
@@ -24,7 +24,7 @@ Clicker game demo for Android (built from Godot Engine).
  2. **DO NOT FORGET TO CHECKOUT TO BRANCH 3.1.1-stable!**
  3. Clone FrogSquare's modules and follow those instructions (add repos to "modules" directory etc).
  4. Customize FrogSquare's module by adding this line to *GODOT_ROOT/modules/GodotGoogleService/android/PlayService.java*:  
- ![module edit photo](github/custommodule.png)  
+ ![module edit photo](https://i.postimg.cc/76SmB5bf/custommodule.png)  
  ```java
  Utils.callScriptFunc("GoogleService", "loginFail", "true"); // ADD THIS LINE
  ```
